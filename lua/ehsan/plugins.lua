@@ -112,6 +112,9 @@ return packer.startup(function(use)
 	-- distraction-free coding
 	use("folke/zen-mode.nvim")
 
+	-- Indent guides for Neovim
+	use("lukas-reineke/indent-blankline.nvim")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
