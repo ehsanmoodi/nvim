@@ -115,6 +115,9 @@ return packer.startup(function(use)
 	-- Indent guides for Neovim
 	use("lukas-reineke/indent-blankline.nvim")
 
+	-- code metrics -> https://wakatime.com/neovim
+	use("wakatime/vim-wakatime")
+
 	if packer_bootstrap then
 		require("packer").sync()
 	end
