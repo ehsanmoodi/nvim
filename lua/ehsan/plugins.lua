@@ -105,6 +105,7 @@ return packer.startup(function(use)
 
 	-- git integration
 	use("lewis6991/gitsigns.nvim") -- show line modifications on left hand side
+	use("f-person/git-blame.nvim")
 
 	-- color highlighter
 	use("norcalli/nvim-colorizer.lua")
@@ -117,6 +118,9 @@ return packer.startup(function(use)
 
 	-- code metrics -> https://wakatime.com/neovim
 	use("wakatime/vim-wakatime")
+
+	-- Free, ultrafast Copilot alternative for Vim and Neovim
+	-- use("Exafunction/codeium.vim")
 
 	if packer_bootstrap then
 		require("packer").sync()
