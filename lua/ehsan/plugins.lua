@@ -119,6 +119,17 @@ return packer.startup(function(use)
 	-- code metrics -> https://wakatime.com/neovim
 	use("wakatime/vim-wakatime")
 
+	use({
+		"altermo/ultimate-autopair.nvim",
+		event = { "InsertEnter", "CmdlineEnter" },
+		branch = "v0.6",
+		config = function()
+			require("ultimate-autopair").setup({
+				--Config goes here
+			})
+		end,
+	})
+
 	-- Free, ultrafast Copilot alternative for Vim and Neovim
 	-- use("Exafunction/codeium.vim")
 
