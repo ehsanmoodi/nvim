@@ -33,7 +33,11 @@ return packer.startup(function(use)
 
 	use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-	use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+	-- colorschemes
+	-- use("bluz71/vim-nightfly-guicolors")
+	-- use({ "rose-pine/neovim", as = "rose-pine" })
+	-- use({ "bluz71/vim-moonfly-colors", as = "moonfly" })
+	use({ "catppuccin/nvim", as = "catppuccin" })
 
 	use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
@@ -128,6 +132,11 @@ return packer.startup(function(use)
 				--Config goes here
 			})
 		end,
+	})
+
+	use({
+		"vuki656/package-info.nvim",
+		requires = "MunifTanjim/nui.nvim",
 	})
 
 	-- Free, ultrafast Copilot alternative for Vim and Neovim

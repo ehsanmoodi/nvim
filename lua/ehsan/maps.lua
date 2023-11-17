@@ -60,3 +60,13 @@ keymap.set("n", "<leader>gc", "<cmd>Telescope git_commits<cr>") -- list all git 
 keymap.set("n", "<leader>gfc", "<cmd>Telescope git_bcommits<cr>") -- list git commits for current file/buffer (use <cr> to checkout) ["gfc" for git file commits]
 keymap.set("n", "<leader>gb", "<cmd>Telescope git_branches<cr>") -- list git branches (use <cr> to checkout) ["gb" for git branch]
 keymap.set("n", "<leader>gs", "<cmd>Telescope git_status<cr>") -- list current changes per file with diff preview ["gs" for git status]
+
+-- package info
+local packageInfo = require("package-info")
+keymap.set("n", "<leader>ns", packageInfo.show, { noremap = true }) -- Show dependency versions
+keymap.set("n", "<leader>nc", packageInfo.hide, { noremap = true }) -- Hide dependency versions
+keymap.set("n", "<leader>nt", packageInfo.toggle, { noremap = true }) -- Toggle dependency versions
+keymap.set("n", "<leader>nu", packageInfo.update, { noremap = true }) -- Update dependency on the line
+keymap.set("n", "<leader>nd", packageInfo.delete, { noremap = true }) -- Delete dependency on the line
+keymap.set("n", "<leader>ni", packageInfo.install, { noremap = true }) -- Install a new dependency
+keymap.set("n", "<leader>np", packageInfo.change_version, { noremap = true }) -- Install a different dependency version

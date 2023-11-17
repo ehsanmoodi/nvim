@@ -4,6 +4,7 @@ local opt = vim.opt
 vim.scriptencoding = "utf-8"
 vim.opt.encoding = "utf-8"
 vim.opt.fileencoding = "utf-8"
+vim.opt.termguicolors = true
 
 -- cmd
 vim.opt.showcmd = true
