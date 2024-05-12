@@ -8,4 +8,4 @@ local o = vim.o
 
 -- Spell
 opt.spell = true
-opt.spelllang = { "en_us", "fa_IR" }
+opt.spelllang = { "en_us" }
