@@ -11,15 +11,19 @@ return {
   {
     "folke/tokyonight.nvim",
     lazy = true,
-    opts = { style = "night" },
+    opts = {
+      style = "night",
+      transparent = true,
+    },
   },
   {
     "sainnhe/everforest",
     lazy = true,
     priority = 1000,
     config = function()
-      vim.g.everforest_background = "hard"
-      vim.g.everforest_better_performance = 1
+      vim.g.everforest_background = "soft"
+      vim.g.everforest_better_performance = "1"
+      vim.g.everforest_transparent_background = "1"
     end,
   },
   {
